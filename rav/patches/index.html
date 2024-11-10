@@ -42,13 +42,8 @@
     <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
 
     
-    <script type="text/javascript" src="js/libs.core.js"></script>
-<script type="text/javascript" src="js/cables.js"></script>
-<script type="text/javascript" src="js/ops.js"></script>
-
-    <script type="text/javascript"  src="js/cgl_light.js"></script>
-<script type="text/javascript"  src="js/cgl_cubemapframebuffer.js"></script>
-
+    <script type="text/javascript" src="js/patch.js" async></script>
+    
 
     <script type="text/javascript">
 
@@ -70,7 +65,7 @@
         document.addEventListener("CABLES.jsLoaded", function (event)
         {
             CABLES.patch = new CABLES.Patch({
-                patchFile: 'js/Hero_1.json',
+                patch: CABLES.exportedPatch,
                 "prefixAssetPath": "",
                 "assetPath": "assets/",
                 "jsPath": "js/",
